@@ -1,25 +1,259 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S5V-US-UmR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Check View Controller-->
+        <scene sceneID="tXk-IX-pWK">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S5V-US-UmR" customClass="CheckViewController" customModule="IsFollowing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="Idw-xh-aEq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ds5-hv-e0K"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7Zz-GG-ahv" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Is" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Iq-P3-fpc">
+                                <rect key="frame" x="20" y="52" width="14" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a twitter name" adjustsFontSizeToFit="NO" minimumFontSize="16" background="textfield_background.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ujp-lk-n8g" customClass="PositionAwareTextField" customModule="IsFollowing" customModuleProvider="target">
+                                <rect key="frame" x="50" y="50" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kh4-cj-s8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="S5V-US-UmR" eventType="editingChanged" id="Yp1-i5-QdM"/>
+                                    <outlet property="delegate" destination="S5V-US-UmR" id="8FJ-X3-IyC"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="following" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="m0g-lD-C5x">
+                                <rect key="frame" x="260" y="90" width="80.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="another twitter name" adjustsFontSizeToFit="NO" minimumFontSize="16" background="textfield_background.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x07-6V-HCB" customClass="PositionAwareTextField" customModule="IsFollowing" customModuleProvider="target">
+                                <rect key="frame" x="50" y="125" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="agA-5n-x4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="S5V-US-UmR" eventType="editingChanged" id="bFD-m4-6BU"/>
+                                    <outlet property="delegate" destination="S5V-US-UmR" id="IEr-2F-QU2"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="?" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XUY-kZ-EFp">
+                                <rect key="frame" x="572" y="127" width="7.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUV-iA-bss">
+                                <rect key="frame" x="20" y="190" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title="Check" backgroundImage="button.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="check:" destination="S5V-US-UmR" eventType="touchUpInside" id="DmP-3n-DWS"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eah-sS-zdl">
+                                <rect key="frame" x="282" y="280" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ra7-dM-jpQ" customClass="ResultView" customModule="IsFollowing" customModuleProvider="target">
+                                <rect key="frame" x="115" y="260" width="370" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-Hn-2oN">
+                                <rect key="frame" x="558" y="558" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="I6a-Ww-vjt" kind="presentation" id="4G4-Qd-Vwq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lUV-iA-bss" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="190" id="044-OV-mbg"/>
+                            <constraint firstItem="lUV-iA-bss" firstAttribute="leading" secondItem="7Zz-GG-ahv" secondAttribute="leading" constant="20" symbolic="YES" id="1vQ-SD-uqL"/>
+                            <constraint firstAttribute="centerX" secondItem="ujp-lk-n8g" secondAttribute="centerX" id="2Ak-aM-yoG"/>
+                            <constraint firstAttribute="trailing" secondItem="ujp-lk-n8g" secondAttribute="trailing" constant="50" id="5EG-bi-KKW"/>
+                            <constraint firstAttribute="trailing" secondItem="x07-6V-HCB" secondAttribute="trailing" constant="50" id="BeD-Fi-k4g"/>
+                            <constraint firstItem="eah-sS-zdl" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="280" id="Dis-KX-abJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ra7-dM-jpQ" secondAttribute="trailing" constant="115" id="GNy-zb-HfN"/>
+                            <constraint firstItem="5Iq-P3-fpc" firstAttribute="leading" secondItem="7Zz-GG-ahv" secondAttribute="leading" constant="20" symbolic="YES" id="JOq-fk-j0n"/>
+                            <constraint firstAttribute="trailing" secondItem="lUV-iA-bss" secondAttribute="trailing" constant="20" symbolic="YES" id="Jqj-tR-l2V"/>
+                            <constraint firstAttribute="centerX" secondItem="m0g-lD-C5x" secondAttribute="centerX" id="Jrx-OX-IRq"/>
+                            <constraint firstAttribute="centerX" secondItem="eah-sS-zdl" secondAttribute="centerX" id="K8A-fY-XVp"/>
+                            <constraint firstAttribute="trailing" secondItem="XUY-kZ-EFp" secondAttribute="trailing" constant="20" symbolic="YES" id="TnW-8I-bEn"/>
+                            <constraint firstItem="ra7-dM-jpQ" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="260" id="V5l-5d-2BF"/>
+                            <constraint firstItem="5Iq-P3-fpc" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="52" id="dDq-rX-jjk"/>
+                            <constraint firstItem="m0g-lD-C5x" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="90" id="eDd-e6-phU"/>
+                            <constraint firstAttribute="bottom" secondItem="ra7-dM-jpQ" secondAttribute="bottom" constant="220" id="f6j-n7-PW4"/>
+                            <constraint firstItem="XUY-kZ-EFp" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="127" id="hFK-Fx-bKl"/>
+                            <constraint firstItem="ujp-lk-n8g" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="50" id="hS2-1X-Vm3"/>
+                            <constraint firstItem="ujp-lk-n8g" firstAttribute="leading" secondItem="7Zz-GG-ahv" secondAttribute="leading" constant="50" id="iXH-PW-MHf"/>
+                            <constraint firstAttribute="trailing" secondItem="Sdh-Hn-2oN" secondAttribute="trailing" constant="20" id="lbN-8T-n5p"/>
+                            <constraint firstItem="x07-6V-HCB" firstAttribute="top" secondItem="7Zz-GG-ahv" secondAttribute="top" constant="125" id="muw-UL-e3x"/>
+                            <constraint firstAttribute="bottom" secondItem="Sdh-Hn-2oN" secondAttribute="bottom" constant="20" id="nXE-KP-Ics"/>
+                            <constraint firstItem="ra7-dM-jpQ" firstAttribute="leading" secondItem="7Zz-GG-ahv" secondAttribute="leading" constant="115" id="qJz-aj-vZc"/>
+                            <constraint firstItem="x07-6V-HCB" firstAttribute="leading" secondItem="7Zz-GG-ahv" secondAttribute="leading" constant="50" id="uj8-gu-FJV"/>
+                            <constraint firstAttribute="centerX" secondItem="x07-6V-HCB" secondAttribute="centerX" id="wUJ-tg-hdT"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="S5V-US-UmR" eventType="touchUpInside" id="4zq-VW-84z"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="checkButton" destination="lUV-iA-bss" id="BNw-F7-F07"/>
+                        <outlet property="firstTextField" destination="ujp-lk-n8g" id="nDx-0C-BTb"/>
+                        <outlet property="firstTextFieldTopSpace" destination="hS2-1X-Vm3" id="sDg-Kz-PJB"/>
+                        <outlet property="resultView" destination="ra7-dM-jpQ" id="vaK-SS-kSz"/>
+                        <outlet property="secondTextField" destination="x07-6V-HCB" id="fLK-ks-PAn"/>
+                        <outlet property="secondTextFieldTopSpace" destination="muw-UL-e3x" id="ZLz-to-wwd"/>
+                        <outlet property="spinner" destination="eah-sS-zdl" id="T9h-pu-iJ2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFb-eL-A9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="261" y="3"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="LdB-Bp-WXE">
+            <objects>
+                <viewController id="I6a-Ww-vjt" customClass="InfoViewController" customModule="IsFollowing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hKa-MU-rCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="md8-4M-CKa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvJ-ys-5dp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Is Following?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiL-oH-vzu">
+                                <rect key="frame" x="20" y="20" width="560" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="w6K-JQ-plJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TLk-tp-FOC">
+                                <rect key="frame" x="20" y="67" width="560" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="kWT-Y2-He5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="© 2013 Natalia Ossipova" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mcP-Bq-t9Q">
+                                <rect key="frame" x="20" y="87" width="560" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Eb2-ka-ujb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyA-vY-6X5">
+                                <rect key="frame" x="20" y="162" width="560" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="wv4-5e-gvl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <state key="normal" title="www.nataliaossipova.net">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openHomepage:" destination="I6a-Ww-vjt" eventType="touchUpInside" id="LFc-52-aBM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-oK-SBX">
+                                <rect key="frame" x="20" y="212" width="560" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5ms-ZF-Wvi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <state key="normal" title="@nossipova">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openTwitter:" destination="I6a-Ww-vjt" eventType="touchUpInside" id="077-ii-78e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OnB-oK-SBX" secondAttribute="trailing" constant="20" symbolic="YES" id="0Dd-Gt-nSz"/>
+                            <constraint firstItem="mcP-Bq-t9Q" firstAttribute="top" secondItem="lvJ-ys-5dp" secondAttribute="top" constant="87" id="A9x-r1-OwT"/>
+                            <constraint firstItem="OnB-oK-SBX" firstAttribute="leading" secondItem="lvJ-ys-5dp" secondAttribute="leading" constant="20" symbolic="YES" id="CqO-eM-IA9"/>
+                            <constraint firstItem="iiL-oH-vzu" firstAttribute="top" secondItem="lvJ-ys-5dp" secondAttribute="top" constant="20" symbolic="YES" id="PwD-nf-aFj"/>
+                            <constraint firstAttribute="trailing" secondItem="iyA-vY-6X5" secondAttribute="trailing" constant="20" symbolic="YES" id="RIv-LP-T1k"/>
+                            <constraint firstAttribute="trailing" secondItem="iiL-oH-vzu" secondAttribute="trailing" constant="20" symbolic="YES" id="Teh-D8-2P0"/>
+                            <constraint firstItem="OnB-oK-SBX" firstAttribute="top" secondItem="lvJ-ys-5dp" secondAttribute="top" constant="212" id="UrS-kf-MLP"/>
+                            <constraint firstItem="iyA-vY-6X5" firstAttribute="top" secondItem="lvJ-ys-5dp" secondAttribute="top" constant="162" id="Vxm-Z4-0JZ"/>
+                            <constraint firstItem="TLk-tp-FOC" firstAttribute="leading" secondItem="lvJ-ys-5dp" secondAttribute="leading" constant="20" symbolic="YES" id="aCd-mW-pGd"/>
+                            <constraint firstAttribute="trailing" secondItem="mcP-Bq-t9Q" secondAttribute="trailing" constant="20" symbolic="YES" id="d6g-lU-ayl"/>
+                            <constraint firstItem="TLk-tp-FOC" firstAttribute="top" secondItem="lvJ-ys-5dp" secondAttribute="top" constant="67" id="fgb-Rb-Na7"/>
+                            <constraint firstItem="iyA-vY-6X5" firstAttribute="leading" secondItem="lvJ-ys-5dp" secondAttribute="leading" constant="20" symbolic="YES" id="hVc-ET-nmj"/>
+                            <constraint firstAttribute="trailing" secondItem="TLk-tp-FOC" secondAttribute="trailing" constant="20" symbolic="YES" id="mRH-w5-fRS"/>
+                            <constraint firstItem="mcP-Bq-t9Q" firstAttribute="leading" secondItem="lvJ-ys-5dp" secondAttribute="leading" constant="20" symbolic="YES" id="uW0-sB-VLm"/>
+                            <constraint firstItem="iiL-oH-vzu" firstAttribute="leading" secondItem="lvJ-ys-5dp" secondAttribute="leading" constant="20" symbolic="YES" id="xeK-o1-waU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="version" destination="TLk-tp-FOC" id="7ed-Pp-5gu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64t-7Y-fn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="3"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button.png" width="180" height="30"/>
+        <image name="textfield_background.png" width="180" height="30"/>
+    </resources>
 </document>

@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387D33BF196D3532005A7115 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D33BE196D3532005A7115 /* FeedbackView.swift */; };
 		38EAC7F3196B212E00CFD738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC7F2196B212E00CFD738 /* AppDelegate.swift */; };
-		38EAC7F5196B212E00CFD738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC7F4196B212E00CFD738 /* ViewController.swift */; };
 		38EAC7F8196B212E00CFD738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38EAC7F6196B212E00CFD738 /* Main.storyboard */; };
 		38EAC7FA196B212E00CFD738 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EAC7F9196B212E00CFD738 /* Images.xcassets */; };
 		38EAC806196B212E00CFD738 /* IsFollowingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC805196B212E00CFD738 /* IsFollowingTests.swift */; };
+		38EAC823196B229900CFD738 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC822196B229900CFD738 /* CheckViewController.swift */; };
+		38EAC825196B22F300CFD738 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC824196B22F300CFD738 /* InfoViewController.swift */; };
+		38EAC827196B240C00CFD738 /* PositionAwareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC826196B240C00CFD738 /* PositionAwareTextField.swift */; };
+		38EAC829196B242800CFD738 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC828196B242800CFD738 /* ResultView.swift */; };
+		38EAC82D196B2ACF00CFD738 /* TwitterCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC82C196B2ACF00CFD738 /* TwitterCommunicator.swift */; };
+		38EAC830196BF9E100CFD738 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC82F196BF9E100CFD738 /* Notification.swift */; };
+		38EAC832196BFAB700CFD738 /* NotificationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAC831196BFAB700CFD738 /* NotificationObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3845BAAF197E7E47000ED861 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38EAC7E5196B212E00CFD738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38EAC7EC196B212E00CFD738;
+			remoteInfo = IsFollowing;
+		};
+		3845BAB1197E7E48000ED861 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38EAC7E5196B212E00CFD738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38EAC7EC196B212E00CFD738;
+			remoteInfo = IsFollowing;
+		};
 		38EAC800196B212E00CFD738 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38EAC7E5196B212E00CFD738 /* Project object */;
@@ -25,15 +46,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		387D33BE196D3532005A7115 /* FeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		38EAC7ED196B212E00CFD738 /* IsFollowing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsFollowing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EAC7F1196B212E00CFD738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38EAC7F2196B212E00CFD738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38EAC7F4196B212E00CFD738 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38EAC7F7196B212E00CFD738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38EAC7F9196B212E00CFD738 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38EAC7FF196B212E00CFD738 /* IsFollowingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IsFollowingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EAC804196B212E00CFD738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38EAC805196B212E00CFD738 /* IsFollowingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFollowingTests.swift; sourceTree = "<group>"; };
+		38EAC822196B229900CFD738 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		38EAC824196B22F300CFD738 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		38EAC826196B240C00CFD738 /* PositionAwareTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionAwareTextField.swift; sourceTree = "<group>"; };
+		38EAC828196B242800CFD738 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		38EAC82C196B2ACF00CFD738 /* TwitterCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCommunicator.swift; sourceTree = "<group>"; };
+		38EAC82F196BF9E100CFD738 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		38EAC831196BFAB700CFD738 /* NotificationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				38EAC7F2196B212E00CFD738 /* AppDelegate.swift */,
-				38EAC7F4196B212E00CFD738 /* ViewController.swift */,
 				38EAC7F6196B212E00CFD738 /* Main.storyboard */,
+				38EAC822196B229900CFD738 /* CheckViewController.swift */,
+				38EAC824196B22F300CFD738 /* InfoViewController.swift */,
+				38EAC826196B240C00CFD738 /* PositionAwareTextField.swift */,
+				38EAC828196B242800CFD738 /* ResultView.swift */,
+				38EAC82B196B2AC100CFD738 /* Networking */,
+				38EAC82E196BF9D200CFD738 /* Shared */,
 				38EAC7F9196B212E00CFD738 /* Images.xcassets */,
 				38EAC7F0196B212E00CFD738 /* Supporting Files */,
 			);
@@ -108,6 +141,25 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		38EAC82B196B2AC100CFD738 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				38EAC82C196B2ACF00CFD738 /* TwitterCommunicator.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		38EAC82E196BF9D200CFD738 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				38EAC82F196BF9E100CFD738 /* Notification.swift */,
+				38EAC831196BFAB700CFD738 /* NotificationObject.swift */,
+				387D33BE196D3532005A7115 /* FeedbackView.swift */,
+			);
+			name = Shared;
+			path = IsFollowing/Shared;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -141,6 +193,8 @@
 			);
 			dependencies = (
 				38EAC801196B212E00CFD738 /* PBXTargetDependency */,
+				3845BAB0197E7E47000ED861 /* PBXTargetDependency */,
+				3845BAB2197E7E48000ED861 /* PBXTargetDependency */,
 			);
 			name = IsFollowingTests;
 			productName = IsFollowingTests;
@@ -153,11 +207,13 @@
 		38EAC7E5196B212E00CFD738 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Natalia Ossipova";
 				TargetAttributes = {
 					38EAC7EC196B212E00CFD738 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 7K9NCDFPG2;
 					};
 					38EAC7FE196B212E00CFD738 = {
 						CreatedOnToolsVersion = 6.0;
@@ -208,7 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38EAC7F5196B212E00CFD738 /* ViewController.swift in Sources */,
+				38EAC82D196B2ACF00CFD738 /* TwitterCommunicator.swift in Sources */,
+				38EAC832196BFAB700CFD738 /* NotificationObject.swift in Sources */,
+				387D33BF196D3532005A7115 /* FeedbackView.swift in Sources */,
+				38EAC823196B229900CFD738 /* CheckViewController.swift in Sources */,
+				38EAC827196B240C00CFD738 /* PositionAwareTextField.swift in Sources */,
+				38EAC829196B242800CFD738 /* ResultView.swift in Sources */,
+				38EAC830196BF9E100CFD738 /* Notification.swift in Sources */,
+				38EAC825196B22F300CFD738 /* InfoViewController.swift in Sources */,
 				38EAC7F3196B212E00CFD738 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +287,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3845BAB0197E7E47000ED861 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38EAC7EC196B212E00CFD738 /* IsFollowing */;
+			targetProxy = 3845BAAF197E7E47000ED861 /* PBXContainerItemProxy */;
+		};
+		3845BAB2197E7E48000ED861 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38EAC7EC196B212E00CFD738 /* IsFollowing */;
+			targetProxy = 3845BAB1197E7E48000ED861 /* PBXContainerItemProxy */;
+		};
 		38EAC801196B212E00CFD738 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38EAC7EC196B212E00CFD738 /* IsFollowing */;
@@ -266,6 +339,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -277,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -307,13 +381,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -325,7 +400,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IsFollowing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -336,7 +413,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IsFollowing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -395,6 +474,7 @@
 				38EAC80B196B212E00CFD738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38EAC80C196B212E00CFD738 /* Build configuration list for PBXNativeTarget "IsFollowingTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +483,7 @@
 				38EAC80E196B212E00CFD738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
