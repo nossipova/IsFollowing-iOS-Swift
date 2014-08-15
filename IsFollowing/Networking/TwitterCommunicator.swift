@@ -33,7 +33,7 @@ class TwitterCommunicator {
                                     let resultObject: AnyObject! = NSJSONSerialization.JSONObjectWithData(responseData, options:NSJSONReadingOptions.AllowFragments, error:&jsonParsingError)
                                     let number = resultObject.valueForKeyPath("relationship.source.following") as? NSNumber
                                     var result: Bool
-                                    if number {
+                                    if number != nil {
                                         result = number!.integerValue == 1 ? true: false
                                     } else {
                                         result = false
@@ -45,7 +45,7 @@ class TwitterCommunicator {
                                     var parsingError: NSError?
                                     let result: AnyObject! = NSJSONSerialization.JSONObjectWithData(responseData, options:NSJSONReadingOptions.MutableContainers, error:&parsingError)
                                     var message: String!
-                                    if parsingError || !result {
+                                    if parsingError != nil || result == nil {
                                         message = "Twitter replied with gibberish."
                                     } else {
                                         message = result.valueForKeyPath("errors.message").componentsJoinedByString("\n")

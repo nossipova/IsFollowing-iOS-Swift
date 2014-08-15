@@ -18,7 +18,13 @@ class FeedbackView: UIView {
     var message: String = ""
     var showSpinner: Bool = false
 
-    init(frame: CGRect) {
+    required init(coder aDecoder: NSCoder!) {
+        controlView = UIControl(frame: CGRectZero)
+        super.init(coder: aDecoder)
+        controlView = UIControl(frame: frame)
+    }
+
+    override init(frame: CGRect) {
         controlView = UIControl(frame: frame)
         super.init(frame: frame)
         backgroundColor = UIColor.clearColor()
@@ -34,7 +40,7 @@ class FeedbackView: UIView {
     class func showFeedback(message: String, showSpinner: Bool) -> FeedbackView {
         let feedbackView = feedback(message)
         feedbackView.showSpinner = showSpinner
-        UIApplication.sharedApplication().delegate.window!.addSubview(feedbackView)
+        UIApplication.sharedApplication().delegate.window!!.addSubview(feedbackView)
         return feedbackView
     }
 
@@ -49,12 +55,12 @@ class FeedbackView: UIView {
     class func showInteractiveFeedback(message: String) {
         let feedbackView = feedback(message)
         feedbackView.addTarget(feedbackView, action:Selector("dismiss"), controlEvents:UIControlEvents.TouchDown)
-        UIApplication.sharedApplication().delegate.window!.addSubview(feedbackView)
+        UIApplication.sharedApplication().delegate.window!!.addSubview(feedbackView)
     }
 
     class func showSelfDismissingFeedback(message: String) {
         let feedbackView = feedback(message)
-        UIApplication.sharedApplication().delegate.window!.addSubview(feedbackView)
+        UIApplication.sharedApplication().delegate.window!!.addSubview(feedbackView)
         feedbackView.dismissAfterDelay(3.0)
     }
 
